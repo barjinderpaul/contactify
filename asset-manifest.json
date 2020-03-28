@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/contactify/static/css/main.3e205d4d.chunk.css",
+    "main.js": "/contactify/static/js/main.82f0934d.chunk.js",
+    "main.js.map": "/contactify/static/js/main.82f0934d.chunk.js.map",
+    "runtime-main.js": "/contactify/static/js/runtime-main.9f9b3cc7.js",
+    "runtime-main.js.map": "/contactify/static/js/runtime-main.9f9b3cc7.js.map",
+    "static/css/2.ec4c23a0.chunk.css": "/contactify/static/css/2.ec4c23a0.chunk.css",
+    "static/js/2.efb77689.chunk.js": "/contactify/static/js/2.efb77689.chunk.js",
+    "static/js/2.efb77689.chunk.js.map": "/contactify/static/js/2.efb77689.chunk.js.map",
+    "index.html": "/contactify/index.html",
+    "precache-manifest.8d0cfbc13637a9bacb472f658ad3ea49.js": "/contactify/precache-manifest.8d0cfbc13637a9bacb472f658ad3ea49.js",
+    "service-worker.js": "/contactify/service-worker.js",
+    "static/css/2.ec4c23a0.chunk.css.map": "/contactify/static/css/2.ec4c23a0.chunk.css.map",
+    "static/css/main.3e205d4d.chunk.css.map": "/contactify/static/css/main.3e205d4d.chunk.css.map",
+    "static/js/2.efb77689.chunk.js.LICENSE.txt": "/contactify/static/js/2.efb77689.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/contactify/static/media/outline-icons.ef60a4f6.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9f9b3cc7.js",
+    "static/css/2.ec4c23a0.chunk.css",
+    "static/js/2.efb77689.chunk.js",
+    "static/css/main.3e205d4d.chunk.css",
+    "static/js/main.82f0934d.chunk.js"
+  ]
+}
