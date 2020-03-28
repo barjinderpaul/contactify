@@ -41,4 +41,25 @@
 .container-custom {
   max-width: 80%;
   padding-left: 20%;
+  padding-top: 1rem;
+}
+
+.search-container {
+  padding-bottom: 1rem;
+}
+
+.add-contact-container {
+  padding : 1rem;
+}
+
+.add-contact-container{
+  padding: 1rem;
+}
+
+.add-contact-container-input {
+  padding: 0.5em;
+}
+
+.navbar {
+  padding-top: 1rem;
 }

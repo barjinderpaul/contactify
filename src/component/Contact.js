@@ -3,6 +3,8 @@ import {Card} from 'semantic-ui-react'
 import Navbar from './Navbar';
 import ContactButton from './ContactButton';
 import AddContact from './AddContact';
+import {Route} from 'react-router-dom';
+
 
 class Contact extends React.Component {
 
@@ -30,18 +32,7 @@ class Contact extends React.Component {
                 name : "John Doe",
                 createdAt : '28/3/2020',
                 mobileNumber : '+91-1234567890'
-            },
-            {
-                name : "Jalep Gopez",
-                createdAt : '28/3/2020',
-                mobileNumber : '+91-1234567890'
-            },
-        
-            {
-                name : "Daniel Gonaz",
-                createdAt : '28/3/2020',
-                mobileNumber : '+91-1234567890'
-            }        
+            }      
         ],
         searchQuery : ""
     }
@@ -76,34 +67,44 @@ class Contact extends React.Component {
         const src = "https://api.adorable.io/avatars/200/abott@adorable.png/";
         return (
             <>
-                <Navbar updateQuery = {this.updateQuery}/>
-                <Card.Group className = "container-custom" itemsPerRow={4}>
-                    { this.state.searchQuery === '' ?
-                            this.state.contacts.map(contact => (
-                                <Card 
-                                    key = {contact.name}
-                                    image = {src}
-                                    header = {contact.name}
-                                    meta = {contact.createdAt}
-                                    description = {contact.mobileNumber}
-                                    extra = {<ContactButton deleteContact = {() => this.deleteContact(contact.name) } />}
-                                />
-                            ))
-                            : 
-                                this.state.contacts.filter(contact => contact.name.toLowerCase().includes(this.state.searchQuery.toLowerCase()))
-                                .map(contact => (
+                <Route exact
+                    path="/"
+                    render = { ()=> (
+                        <>
+                        <Navbar updateQuery = {this.updateQuery}/>
+                        <Card.Group className = "container-custom" itemsPerRow={4}>
+                        { this.state.searchQuery === '' ?
+                                this.state.contacts.map(contact => (
                                     <Card 
-                                    key = {contact.name}
-                                    image = {src}
-                                    header = {contact.name}
-                                    meta = {contact.createdAt}
-                                    description = {contact.mobileNumber}
-                                    extra = {<ContactButton deleteContact = {() => this.deleteContact(contact.name) } />}
-                                />
+                                        key = {contact.name}
+                                        image = {src}
+                                        header = {contact.name}
+                                        meta = {contact.createdAt}
+                                        description = {contact.mobileNumber}
+                                        extra = {<ContactButton deleteContact = {() => this.deleteContact(contact.name) } />}
+                                    />
                                 ))
-                        }
-                </Card.Group> 
-                <AddContact addContact = {(name, mobileNumber) => this.addContact(name,mobileNumber)}/>  
+                                : 
+                                    this.state.contacts.filter(contact => contact.name.toLowerCase().includes(this.state.searchQuery.toLowerCase()))
+                                    .map(contact => (
+                                        <Card 
+                                        key = {contact.name}
+                                        image = {src}
+                                        header = {contact.name}
+                                        meta = {contact.createdAt}
+                                        description = {contact.mobileNumber}
+                                        extra = {<ContactButton deleteContact = {() => this.deleteContact(contact.name) } />}
+                                    />
+                                    ))
+                            }
+                        </Card.Group>
+                        </>
+                    )} 
+                /> 
+                <Route 
+                    path="/create" 
+                    render = { () => ( <AddContact addContact = {(name, mobileNumber) => this.addContact(name,mobileNumber)}/> )} 
+                />
             </>
         );
     }   
