@@ -52,14 +52,23 @@
   padding : 1rem;
 }
 
-.add-contact-container{
-  padding: 1rem;
-}
-
 .add-contact-container-input {
   padding: 0.5em;
 }
 
 .navbar {
   padding-top: 1rem;
+}
+
+.alert-message {
+  max-width: 80%;
+  padding-left: 1rem;
+}
+
+.center-container {
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
