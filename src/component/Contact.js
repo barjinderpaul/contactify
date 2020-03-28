@@ -63,6 +63,8 @@ class Contact extends React.Component {
         });
     }
 
+    updateQuery = this.updateQuery.bind(this);
+
     render() {
         const src = "https://api.adorable.io/avatars/200/abott@adorable.png/";
         return (
@@ -71,7 +73,7 @@ class Contact extends React.Component {
                     path="/"
                     render = { ()=> (
                         <>
-                        <Navbar updateQuery = {this.updateQuery}/>
+                        <Navbar updateQuery = {this.updateQuery} query = {this.state.searchQuery}/>
                         <Card.Group className = "container-custom" itemsPerRow={4}>
                         { this.state.searchQuery === '' ?
                                 this.state.contacts.map(contact => (
