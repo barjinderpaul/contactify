@@ -35,7 +35,7 @@ class AddContact extends React.Component{
             <>
                 <Container textAlign = 'center' text className = 'add-contact-container'>
                     <Container textAlign="left" >
-                        <Link to = "/">
+                        <Link to = "/contactify/">
                             <Button icon="long arrow alternate left" circular primary size='massive'/>
                         </Link>
                     </Container>
