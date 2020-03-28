@@ -28,7 +28,7 @@ export default class Navbar extends Component {
         />
         <Menu.Menu position='right'>
           <Menu.Item>
-            <Input icon='search' placeholder='Search contacts' />
+            <Input icon='search' placeholder='Search contacts' onChange = {this.props.updateQuery} />
           </Menu.Item>
         </Menu.Menu>
       </Menu>
