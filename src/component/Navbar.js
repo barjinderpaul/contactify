@@ -9,7 +9,7 @@ export default class Navbar extends Component {
     return (
         <Container textAlign='center' className = 'search-container' className='navbar'>
           <Input size='massive' icon='search' placeholder='Search...' onChange = {this.props.updateQuery} value = {this.props.query} /> {' '}
-          <Link to="/create">
+          <Link to="/contactify/create">
             <Button size = 'massive' circular icon = 'add user' color ='green'/>
           </Link>
         </Container>

@@ -70,7 +70,7 @@ class Contact extends React.Component {
         return (
             <>
                 <Route exact
-                    path="/"
+                    path="/contactify/"
                     render = { ()=> (
                         <>
                         <Navbar updateQuery = {this.updateQuery} query = {this.state.searchQuery}/>
@@ -104,7 +104,7 @@ class Contact extends React.Component {
                     )} 
                 /> 
                 <Route 
-                    path="/create" 
+                    path="/contactify/create" 
                     render = { () => ( <AddContact addContact = {(name, mobileNumber) => this.addContact(name,mobileNumber)}/> )} 
                 />
             </>
