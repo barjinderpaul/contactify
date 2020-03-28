@@ -2,6 +2,7 @@ import React from 'react';
 import {Card} from 'semantic-ui-react'
 import Navbar from './Navbar';
 import ContactButton from './ContactButton';
+import AddContact from './AddContact';
 
 class Contact extends React.Component {
 
@@ -9,36 +10,36 @@ class Contact extends React.Component {
         contacts : [
             {
                 name : "Gonzalvis Han",
-                createdAt : '2020-02-28',
+                createdAt : '28/3/2020',
                 mobileNumber : '+91-1234567890'
             },
         
             {
                 name : "Kate cena",
-                createdAt : '2020-03-21',
+                createdAt : '28/3/2020',
                 mobileNumber : '+91-1234567890'
             },
         
             {
                 name : "Sin Gabriel",
-                createdAt : '2020-03-22',
+                createdAt : '28/3/2020',
                 mobileNumber : '+91-1234567890'
             },
         
             {
                 name : "John Doe",
-                createdAt : '2020-03-25',
+                createdAt : '28/3/2020',
                 mobileNumber : '+91-1234567890'
             },
             {
                 name : "Jalep Gopez",
-                createdAt : '2020-03-22',
+                createdAt : '28/3/2020',
                 mobileNumber : '+91-1234567890'
             },
         
             {
                 name : "Daniel Gonaz",
-                createdAt : '2020-03-25',
+                createdAt : '28/3/2020',
                 mobileNumber : '+91-1234567890'
             }        
         ],
@@ -56,6 +57,19 @@ class Contact extends React.Component {
         this.setState({
             searchQuery: event.target.value
         })
+    }
+
+    addContact = ({name, mobileNumber}) => {
+        
+        let newContact = {
+            name,
+            createdAt: new Date().toLocaleString("en-IN", {timeZone: "Asia/Kolkata"}).split(',')[0],
+            mobileNumber
+        };
+
+        this.setState({
+            contacts: this.state.contacts.concat(newContact)
+        });
     }
 
     render() {
@@ -88,7 +102,8 @@ class Contact extends React.Component {
                                 />
                                 ))
                         }
-                </Card.Group>   
+                </Card.Group> 
+                <AddContact addContact = {(name, mobileNumber) => this.addContact(name,mobileNumber)}/>  
             </>
         );
     }   
